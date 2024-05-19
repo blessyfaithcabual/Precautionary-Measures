@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+#nav{
+    width: 100%;
+    height: auto;
+    padding: 2em 5em;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all 0.3s ease;
+
+    z-index: 1000;
+}
+
+#nav a{
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    list-style: none;
+    color: white;
+}
+
+.links a,
+.links a:hover,
+.links a:visited,
+.links a:active,
+.links a:focus{
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span{
+    color: rgb(169, 197, 68);
+}
+
+.links li{
+    padding: 10px 20px;
+    font-weight: 400;
+}
+
+.links li:hover{
+    transition: all 1s ease;
+    font-weight: 500;
+    cursor: pointer;
+    background: rgb(169, 197, 68);
+    color: black;
+    border-radius: 100px;
+}
+
+.links li.active{
+    transition: all 1s ease;
+    font-weight: 500;
+    cursor: pointer;
+    background: rgb(169, 197, 68);
+    color: black;
+    border-radius: 100px;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/homepage-hero.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.content{
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero .content{
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero .content h1{
+    font-weight: 700;
+    font-size: 4em;
+    letter-spacing: 2px;;
+    line-height: 1.2em;
+    color: rgb(169, 197, 68);
+    text-transform: uppercase;
+}
+
+.hero .content h2{
+    font-weight: 2em;
+    letter-spacing: 2px;
+    line-height: 1.5em;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.section{
+    padding: 8em 2em;
+}
+
+.section.description{
+    background: rgb(169, 197, 68);
+}
+
+.section_title{
+    font-size: 4em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+
+.section_description{
+    text-align: left;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-top: 1em;
+    color: #3b4238;
+}
+
+.btn{
+    padding: 0.5em 2em;
+    border: none;
+    text-decoration: none;
+    border-radius: 100px;
+    background: rgb(113, 131, 47);
+    color: white;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    margin-top: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background: rgb(169, 197, 68);
+}
+
+.source{
+    display: block;
+    margin-top: 1.5em;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.section.video{
+    padding: 0;
+    width: 100%;
+    height: 2100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section.video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.section.video .video-content{
+    background: rgba(43, 38, 38, 0.9);
+    position: absolute;
+    z-index: 500;
+    width: 100%;
+    height: 100%;
+}
+
+.section.video .video-content .content{
+    padding: 8em 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: rgb(169, 197, 68);
+}
+
+.hazards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3em;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+.hazard{
+    width: 30%;
+    background: rgb(169, 197, 68);
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.hazard:hover{
+    transform: scale(1.1);
+    background: black;
+}
+
+.hazard-image{
+    width: 100%;
+    height: 300px;
+}
+
+.hazard-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hazard-image:hover img{
+    filter: brightness(1);
+}
+
+.hazard-title{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding:0.5em;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+.hazard:hover .hazard-title{
+    color: rgb(169, 197, 68);
+}
+
+footer{
+    background: black;
+    color: rgb(169, 197, 68);
+    padding: 1.5em 2em;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero.typhoon{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/typhoon-dark.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.hero.thunderstorm{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/thunderstorm-hd.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.hero.flood{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/flood-hero.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.hero.storm-surge{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/storm-surge-hd.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.hero.elnino{
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/drought\ hd.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.actions{
+    margin-top: 5em;
+}
+
+.action{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.action-image{
+    width: 70%;
+}
+
+.action-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.action-text h4{
+    font-size: 1.5em;        
+    font-weight: 600;
+    max-width: 500px;
+}
+
+.action-text{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.section.during{
+    background-color: rgb(169, 197, 68);
+}
+
+.section.after{
+    background-color: black;
+    color: white;
+}
+
+#thunderstorm .actions{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+#thunderstorm .action{
+    width: 100%;
+    height: auto;
+    padding: 5em 1em 1em 1em;
+    display: flex;
+    align-items: flex-end;
+    min-height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    position: relative;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+#thunderstorm .action:hover{
+    background-size: 120%;
+}
+
+#thunderstorm .action-text{
+    color: white;
+    background: rgb(169, 197, 68);
+    padding: 1em 2em;
+    position: absolute;
+    bottom: 5%;
+    left: 2%
+}
+
+#thunderstorm .section.during .action{
+    background-attachment: unset;
+}
+
+#thunderstorm .section.during .action-text{
+    color: white;
+    background: black;
+}
